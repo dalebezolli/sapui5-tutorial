@@ -4,7 +4,8 @@
 >
     <Dialog id="helloDialog" title="Hello {/recipient/name}">
         <content>
-            <Text text="{/recipient/name}, I've been expecting you..." />
+            <Text text="{/recipient/name}, I've been expecting you..." class="sapUiMediumMarginBegin" />
+            <core:Icon src="sap-icon://hello-world" size="4rem" class="sapUiMediumMargin" />
         </content>       
 
         <beginButton>
