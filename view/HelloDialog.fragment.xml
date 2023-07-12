@@ -2,5 +2,13 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
 >
-    <Dialog id="helloDialog" title="Hello {/recipient/name}" />
+    <Dialog id="helloDialog" title="Hello {/recipient/name}">
+        <content>
+            <Text text="{/recipient/name}, I've been expecting you..." />
+        </content>       
+
+        <beginButton>
+            <Button text="{i18n>closeDialogButtonText}" press=".onHideDialogHello" />
+        </beginButton>
+    </Dialog>
 </core:FragmentDefinition>

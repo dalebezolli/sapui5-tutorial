@@ -20,6 +20,9 @@ sap.ui.define([
             }
 
             this.pDialog.then(function(oDialog) { oDialog.open() });
+        },
+        onHideDialogHello: function() {
+            this.byId('helloDialog').close();
         }
     });
 });
