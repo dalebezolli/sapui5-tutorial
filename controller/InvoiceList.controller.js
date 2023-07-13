@@ -25,8 +25,9 @@ sap.ui.define([
             binding.filter(filter);
         },
         onPress: function(event) {
+            const invoicePath = event.getSource().getBindingContext('invoice').getPath().substr(1);
             const router = this.getOwnerComponent().getRouter();
-            router.navTo('detail');
+            router.navTo('detail', { invoicePath: window.encodeURIComponent(invoicePath) });
         }
     });
 });
