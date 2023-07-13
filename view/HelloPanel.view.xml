@@ -3,14 +3,14 @@
     xmlns:mvc="sap.ui.core.mvc"
     controllerName="sap.ui.demo.walkthrough.controller.HelloPanel"
 >
-    <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
+    <Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto" expandable="{device>/system/phone}" expanded="{= !${device>/system/phone}}">
         <content>
             <Button 
                 text="{i18n>openDialogButtonText}" 
                 icon="sap-icon://world"
                 press=".onShowDialogHello" 
                 id="helloDialogButton" 
-                class="sapUiLargeMarginEnd" 
+                class="sapUiLargeMarginEnd sapUiVisibleOnlyOnDesktop" 
             />
 
             <Button text="{i18n>showHelloButtonText}" press=".onShowHello" />
