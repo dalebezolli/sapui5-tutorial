@@ -46,6 +46,39 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "invoices.json"
 			}
-		}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"type": "View",
+				"viewType": "XML",
+				"path": "sap.ui.demo.walkthrough.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true
+			},
+			"routes": [
+				{
+					"pattern": "",
+					"name": "overview",
+					"target": "overview"
+				},
+				{
+					"pattern": "detail",
+					"name": "detail",
+					"target": "detail"
+				}
+			],
+			"targets": {
+				"overview": {
+					"id": "overview",
+					"name": "Overview"
+				},
+				"detail": {
+					"id": "detail",
+					"name": "Detail"
+				}
+			}
+		  }
 	}
 }

@@ -23,6 +23,10 @@ sap.ui.define([
             const binding = list.getBinding('items');
             console.log(binding);
             binding.filter(filter);
+        },
+        onPress: function(event) {
+            const router = this.getOwnerComponent().getRouter();
+            router.navTo('detail');
         }
     });
 });

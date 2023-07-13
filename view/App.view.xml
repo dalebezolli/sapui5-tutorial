@@ -4,19 +4,6 @@
     controllerName="sap.ui.demo.walkthrough.controller.App"
 >
     <Shell>
-        <App>
-            <pages>
-                <Page title="{i18n>homePageTitle}">
-                    <headerContent>
-                        <Button icon="sap-icon://hello-world" press=".onShowDialogHello" />
-                    </headerContent>
-
-                    <content>
-                        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.HelloPanel" />
-                        <mvc:XMLView viewName="sap.ui.demo.walkthrough.view.InvoiceList" />
-                    </content>
-                </Page>
-            </pages>
-        </App>
+        <App id="app" />
     </Shell>
 </xml:View>

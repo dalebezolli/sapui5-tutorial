@@ -21,6 +21,7 @@ sap.ui.define([
             });
 
             this.setModel(i18nModel, 'i18n');
+            this.getRouter().initialize();
         }
     });
 });
