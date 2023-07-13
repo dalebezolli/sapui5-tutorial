@@ -4,11 +4,22 @@
     controllerName="sap.ui.demo.walkthrough.controller.InvoiceList"
 >
     <List
-        headerText="{i18n>invoiceListTitle}"
+        id="invoiceList"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{invoice>/Invoices}"
+        items="{
+            path: 'invoice>/Invoices',
+            sorter: { path: 'ShipperName', group: true }
+            }"
     >
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer />
+                <SearchField width="50%" search=".onFilterInvoices" class="sapUiSmallMarginBottom" />
+            </Toolbar>
+        </headerToolbar>
+
         <items>
             <ObjectListItem 
                 title="{invoice>Quantity} x {invoice>ProductName}" 
