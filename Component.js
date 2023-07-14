@@ -28,6 +28,13 @@ sap.ui.define([
 
             this.setModel(i18nModel, 'i18n');
             this.getRouter().initialize();
+        },
+        getContentDensityClass: function() {
+            if(!Device._contentDensityClass) {
+                this._contentDensityClass = (!Device.support.touch) ? 'sapUiSizeCompact' : 'sapUiSizeCozy';
+            }
+
+            return Device._contentDensityClass;
         }
     });
 });
